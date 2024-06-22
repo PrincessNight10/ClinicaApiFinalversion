@@ -20,11 +20,20 @@ public class Doctor {
     private String Direccion;
     @Column(name = "Telefono")
     private String Telefono;
-    public Doctor() {
-    }
+
 
     public Doctor(String nombre, String especialidad, String direccion, String telefono) {
+       this. Nombre = nombre;
+       this.Especialidad = especialidad;
+        this.Direccion = direccion;
+        this.Telefono = telefono;
     }
+
+
+    public Doctor() {
+
+    }
+
 
     // Getters y Setters
     public int getIdMedico() {

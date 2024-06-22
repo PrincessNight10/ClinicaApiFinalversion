@@ -17,13 +17,24 @@ public class Patient {
     private String Direccion;
     @Column(name = "Telefono")
     private String Telefono;
-    @Column(name = "FecgadeNacimiento")
+    @Column(name = "FechadeNacimiento")
     private String FechadeNacimiento;
+
     public Patient() {
+        this.Nombre = "";
+        this.Direccion = "";
+        this.Telefono = "";
+        this.FechadeNacimiento = "";
     }
 
+
     public Patient(String nombre, String direccion, String telefono, String fechadeNacimiento) {
+        this.Nombre = nombre;
+        this.Direccion = direccion;
+        this.Telefono = telefono;
+        this.FechadeNacimiento = fechadeNacimiento;
     }
+
 
 
     public int getID_Paciente() {

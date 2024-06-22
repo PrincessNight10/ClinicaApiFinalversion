@@ -1,11 +1,10 @@
 package com.Final.ClinicaApiFinalversion.Model;
 
 
-import jakarta.persistence.*; // for Spring Boot 3
-
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Citas") // Nombre de la tabla en la base de datos
+@Table(name = "Citas")
 public class Citas {
 
     @Id
@@ -16,10 +15,9 @@ public class Citas {
     @Column(name = "MotivoCita")
     private String motivoCita;
 
-    @Column(name = "EstadoCita")
     @Enumerated(EnumType.STRING)
+    @Column(name = "estadoCita")
     private EstadoCita estadoCita;
-
 
     @Column(name = "ID_Paciente")
     private int ID_Paciente;
@@ -31,9 +29,15 @@ public class Citas {
     public Citas() {
     }
 
+    // Constructor con parámetros
     public Citas(String motivoCita, EstadoCita estadoCita, int idPaciente, int idMedico) {
+        this.motivoCita = motivoCita;
+        this.estadoCita = estadoCita;
+        this.ID_Paciente = idPaciente;
+        this.ID_Medico = idMedico;
     }
 
+    // Getters y Setters
     public int getID_Citas() {
         return ID_Citas;
     }
