@@ -31,6 +31,7 @@ public class Citas {
 
     // Constructor con parámetros
     public Citas(String motivoCita, EstadoCita estadoCita, int idPaciente, int idMedico) {
+        
         this.motivoCita = motivoCita;
         this.estadoCita = estadoCita;
         this.ID_Paciente = idPaciente;

@@ -23,7 +23,7 @@ public class Doctor {
 
 
     public Doctor(String nombre, String especialidad, String direccion, String telefono) {
-       this. Nombre = nombre;
+        this. Nombre = nombre;
        this.Especialidad = especialidad;
         this.Direccion = direccion;
         this.Telefono = telefono;
